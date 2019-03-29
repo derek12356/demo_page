@@ -31,8 +31,12 @@
     }
 
     &__left {
+        padding-top:3rem;
         width: 33.333333%;
         display: table-cell;
+        @include respond(phone) {
+            display:none;
+        }
     }
 
     &__right {
@@ -40,6 +44,9 @@
         display: table-cell;
         vertical-align: middle;
         padding: 3rem 5rem;
+        @include respond(phone) {
+            padding: 2rem;
+        }
     }
 
     &__img {
@@ -63,6 +70,9 @@
         -ms-hyphens: auto;
         -webkit-hyphens: auto;
         hyphens: auto;
+        @include respond(phone) {
+            font-size: 1.2rem
+        }
     }
 
     //Open states
