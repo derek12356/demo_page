@@ -564,10 +564,7 @@ body {
   .popup__left {
     padding-top: 3rem;
     width: 33.333333%;
-    display: table-cell; }
-    @media only screen and (max-width: 37.5em) {
-      .popup__left {
-        display: none; } }
+    display: none; }
   .popup__right {
     width: 66.6666667%;
     display: table-cell;
@@ -850,7 +847,7 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1500;
+  z-index: -99;
   opacity: 0;
   width: 0;
   transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55); }
@@ -886,6 +883,9 @@ body {
   background-position: 100%;
   color: #5fc1f1;
   transform: translateX(1rem); }
+
+.navigation__checkbox:checked ~ .navigation__nav {
+  z-index: 1500; }
 
 .navigation__checkbox:checked ~ .navigation__background {
   transform: scale(80); }

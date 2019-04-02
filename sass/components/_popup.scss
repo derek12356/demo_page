@@ -33,10 +33,10 @@
     &__left {
         padding-top:3rem;
         width: 33.333333%;
-        display: table-cell;
-        @include respond(phone) {
+//        display: table-cell;
+//        @include respond(phone) {
             display:none;
-        }
+//        }
     }
 
     &__right {

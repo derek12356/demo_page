@@ -54,7 +54,7 @@
         position: fixed;
         top: 0;
         left: 0;
-        z-index: 1500;
+        z-index: -99;
 
         opacity: 0;
         width: 0;
@@ -88,7 +88,6 @@
             background-image: linear-gradient(120deg, transparent 0%, transparent 50%, $color-white 50%);
             background-size: 220%;
             transition: all .4s;
-
             span {
                 margin-right: 1.5rem;
                 display: inline-block;
@@ -102,8 +101,10 @@
             transform: translateX(1rem);
         }
     }
-
-
+    
+    &__checkbox:checked ~ &__nav{
+        z-index: 1500;
+    }
     //FUNCTIONALITY
     &__checkbox:checked ~ &__background {
         transform: scale(80);
